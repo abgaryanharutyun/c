@@ -8,7 +8,7 @@
       "browser": "chrome",
       "desiredCapabilities": {
         "chromeOptions": {
-          "args": ["--no-sandbox", "--headless", "window-size=1024,768"]
+          "args": ["--no-sandbox", "--headless"]
         }
       }
     }

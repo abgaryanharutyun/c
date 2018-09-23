@@ -5,7 +5,12 @@
   "helpers": {
     "WebDriverIO": {
       "url": "http://localhost",
-      "browser": "chrome"
+      "browser": "chrome",
+      "desiredCapabilities": {
+        "chromeOptions": {
+          "args": ["--no-sandbox"]
+        }
+      }
     }
   },
   "include": {

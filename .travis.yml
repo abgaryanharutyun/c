@@ -14,6 +14,7 @@ cache: # store directories between builds; fetch and update each build
 before_install:
   
 install:
+  - npm install webdriverio -g
   - npm install selenium-standalone@latest -g
   - selenium-standalone install
   - selenium-standalone start &

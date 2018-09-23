@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '8'
+dist: trusty # Chrome headless requires Ubuntu Trusty. Read more: https://docs.travis-ci.com/user/trusty-ci-environment/
+sudo: required # runs each build in a container on a shared host via Docker; container contents are pristine copy of the Docker image
+addons:
+  chrome: stable
+services:
+  - docker
+cache: # store directories between builds; fetch and update each build
+  yarn: true
+  directories:
+    - node_modules
+before_install:
+  
+install:
+  - yarn
+script:
+  - yarn test
